@@ -10,7 +10,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type']
   }));
 
-app.post("/submit", async(req, res)=> {
+app.use("/submit", async(req, res)=> {
     const email = req.body.email
     console.log(req.body.email)
 
