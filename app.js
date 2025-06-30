@@ -2,8 +2,13 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
-app.use(cors())
 app.use(express.json())
+
+app.use(cors({
+    origin: ['https://jo-ney.github.io'], // update if needed
+    methods: ['POST'],
+    allowedHeaders: ['Content-Type']
+  }));
 
 app.post("/submit", async(req, res)=> {
     const email = req.body.email
