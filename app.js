@@ -5,7 +5,7 @@ const cors = require('cors')
 app.use(express.json())
 
 app.use(cors({
-    origin: ['https://jo-ney.github.io'], // update if needed
+    origin: ['http://localhost:3000', 'https://jo-ney.github.io'], // update if needed
     methods: ['POST'],
     allowedHeaders: ['Content-Type']
   }));
